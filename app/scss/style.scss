@@ -1,0 +1,169 @@
+@import "_fonts.scss";
+@import "_vars.scss";
+@import "_global.scss";
+
+.header {
+    padding: 27px 60px;
+    &__ul {
+        display: flex;
+        justify-content: flex-end;
+        @include f500;
+        li {
+            a {
+                padding: 15px;
+            }
+        }
+    }
+}
+.content {
+    .about {
+        padding: 150px 0 75px;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .about-me {
+                &__title {
+                    @include h1;
+                    max-width: 445px;
+                }
+                p {
+                    max-width: 500px;
+                    margin-bottom: 38px;
+                }
+                button {
+                    background-color: $orange;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    @include f500;
+                    padding: 15px 20px;
+                }
+            }
+            .about-img {
+                border-radius: 50%;
+                position: relative;
+                .about-img__circle {
+                    position: absolute;
+                    z-index: -1;
+                    transform: translate(-5px, 13px);
+                    width: 100%;
+                    height: 100%;
+                    max-height: 243px;
+                    background-color: #edf7fa;
+                    border-radius: 50%;
+                }
+                img {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .posts {
+        padding: 27px 0 32px;
+        background-color: #edf7fa;
+        &-name {
+            @include section-name;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-links {
+            font-size: 1rem;
+            color: $blue-l;
+        }
+        &-items {
+            display: flex;
+            justify-content: space-between;
+            .posts-item {
+                background-color: #fff;
+                border-radius: 4px;
+                padding: 4px 23px 24px 21px;
+                max-width: 418px;
+                &__title {
+                    @include h2;
+                }
+                span {
+                    font-size: 1.1rem;
+                }
+                &__date {
+                    margin-right: 25px;
+                }
+                &__topic {
+                    margin-left: 20px;
+                }
+                &__text {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .works {
+        padding: 50px 0;
+        &-name {
+            @include section-name;
+        }
+        &__items {
+            .works-item {
+                display: flex;
+                align-items: center;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+                border-bottom: 1px solid #e0e0e0;
+                &__img {
+                    img {
+                    }
+                }
+                &__info {
+                    margin-left: 18px;
+                    &-title {
+                        margin-top: 0;
+                        @include h2;
+                    }
+                    &-year {
+                        background-color: #142850;
+                        border-radius: 16px;
+                        color: #fff;
+                        font-size: 1.1rem;
+                        font-weight: 900;
+                        padding: 0 10px 0 15px;
+                        height: 25px;
+                        margin-right: 25px;
+                    }
+                    &-topic {
+                        font-size: 1.25rem;
+                        color: $light;
+                    }
+                    &-text {
+                        margin-top: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 54px;
+    &__social {
+        display: flex;
+        margin-bottom: 26px;
+        li{
+            margin-left: 12px;
+            margin-right: 12px;
+            a{
+                padding: 10px 10px;
+                object{
+                    pointer-events: none;
+                }
+            }   
+        }
+    }
+    &__copyright {
+        text-align: center;
+    }
+}
+
+@import "_media.scss";
