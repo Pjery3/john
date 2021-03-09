@@ -81,6 +81,7 @@
                 max-width: 418px;
                 &__title {
                     @include h2;
+                    font-size: 1.6rem;
                 }
                 span {
                     font-size: 1.1rem;
@@ -93,6 +94,27 @@
                 }
                 &__text {
                     margin-top: 15px;
+                }
+            }
+        }
+        &.blog {
+            background-color: #fff;
+            .blog__inner {
+                max-width: 704px;
+                margin: 0 auto;
+            }
+            .posts-name {
+                @include h1;
+            }
+            .posts-items {
+                flex-direction: column;
+                .posts-item {
+                    max-width: none;
+                    padding: 4px 23px 30px 0px;
+                    border-bottom: 1px solid #e0e0e0;
+                    &__topic {
+                        color: $light;
+                    }
                 }
             }
         }
@@ -115,18 +137,14 @@
                 }
                 &__info {
                     margin-left: 18px;
+                    max-height: 180px;
                     &-title {
                         margin-top: 0;
                         @include h2;
                     }
                     &-year {
+                        @include year;
                         background-color: #142850;
-                        border-radius: 16px;
-                        color: #fff;
-                        font-size: 1.1rem;
-                        font-weight: 900;
-                        padding: 0 10px 0 15px;
-                        height: 25px;
                         margin-right: 25px;
                     }
                     &-topic {
@@ -135,11 +153,76 @@
                     }
                     &-text {
                         margin-top: 22px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        &.page {
+            .page__inner {
+                max-width: 730px;
+                .works__items {
+                    .works-item {
+                        padding-bottom: 50px;
                     }
                 }
             }
         }
     }
+
+    /////////////////////////                   Start Work Detail
+
+    .works-detail {
+        &__inner {
+            max-width: 700px;
+            margin: 0 auto;
+            .detail-name {
+                @include h1;
+                max-width: 500px;
+                font-size: 2.1rem;
+            }
+            .detail-date {
+                @include year;
+                background-color: $orange;
+                padding: 0 10px 0 10px;
+                margin-right: 17px;
+            }
+            .detail-topic {
+                font-size: 1.25rem;
+            }
+            .detail-text {
+                margin-top: 25px;
+                margin-bottom: 45px;
+                max-width: 681px;
+            }
+            .detail-img {
+                margin-bottom: 54px;
+                width: 100%;
+                &_2 {
+                    margin-bottom: 27px;
+                    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+                }
+                &_3 {
+                }
+                img {
+                    
+                }
+            }
+            .detail-title {
+                @include h2;
+                font-weight: 500;
+            }
+            .detail-subtitle {
+                @include h3;
+            }
+        }
+    }
+
+    /////////////////////////                   End Work Detail
 }
 
 .footer {
@@ -150,15 +233,15 @@
     &__social {
         display: flex;
         margin-bottom: 26px;
-        li{
+        li {
             margin-left: 12px;
             margin-right: 12px;
-            a{
+            a {
                 padding: 10px 10px;
-                object{
+                object {
                     pointer-events: none;
                 }
-            }   
+            }
         }
     }
     &__copyright {
